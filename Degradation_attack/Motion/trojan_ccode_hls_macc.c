@@ -35,7 +35,8 @@ long long int do_twos_complement( unsigned long long int a ,int width){
 		return a;
 	}
 }
-void hls_macc(unsigned long long int *ap_clk__1,unsigned long long int *ap_done__1,unsigned long long int *ap_idle__1,unsigned long long int *ap_ready__1,unsigned long long int *ap_return__1,unsigned long long int *ap_rst__1,unsigned long long int *ap_start__1,unsigned long long int *in1__1,unsigned long long int *in10__1,unsigned long long int *in2__1,unsigned long long int *in3__1,unsigned long long int *in4__1,unsigned long long int *in5__1,unsigned long long int *in6__1,unsigned long long int *in7__1,unsigned long long int *in8__1,unsigned long long int *in9__1,unsigned long long int *out1__1,unsigned long long int *out1_ap_vld__1,unsigned long long int *out2__1,unsigned long long int *out2_ap_vld__1,unsigned long long int *out3__1,unsigned long long int *out3_ap_vld__1,unsigned long long int *trigger__1,int dummy){
+
+void hls_macc(unsigned long long int *ap_clk__1,unsigned long long int *ap_done__1,unsigned long long int *ap_idle__1,unsigned long long int *ap_ready__1,unsigned long long int *ap_return__1,unsigned long long int *ap_rst__1,unsigned long long int *ap_start__1,unsigned long long int *in1__1,unsigned long long int *in2__1,unsigned long long int *in3__1,unsigned long long int *in4__1,unsigned long long int *in5__1,unsigned long long int *in6__1,unsigned long long int *in7__1,unsigned long long int *in8__1,unsigned long long int *in9__1,unsigned long long int *in10__1,unsigned long long int *out1__1,unsigned long long int *out1_ap_vld__1,unsigned long long int *out2__1,unsigned long long int *out2_ap_vld__1,unsigned long long int *out3__1,unsigned long long int *out3_ap_vld__1,unsigned long long int *trigger__1,int dummy){
 unsigned long long int ap_clk=*ap_clk__1;
 unsigned long long int ap_done=*ap_done__1;
 unsigned long long int ap_idle=*ap_idle__1;
@@ -1171,5 +1172,41 @@ unsigned long long int trigger=*trigger__1;
 	*out3__1=out3;
 	*out3_ap_vld__1=out3_ap_vld;
 	*trigger__1=trigger;
+	printf("%lld\n",do_twos_complement(ap_return,32));
        return;
+}
+
+int main(){
+	for(int i=0; i<100; i++){
+		unsigned long long int ap_clk__1 = 1;
+		unsigned long long int ap_done__1 = 0;
+		unsigned long long int ap_idle__1 = 0;
+		unsigned long long int ap_ready__1 = 1;
+		unsigned long long int ap_return__1 = 0;
+		//unsigned long long int ap_return1_ap_vld__1 = 0;
+		unsigned long long int ap_rst__1 = 0;
+		unsigned long long int ap_start__1 = 1;
+		unsigned long long int in1__1; 
+		unsigned long long int in2__1;
+		unsigned long long int in3__1;
+		unsigned long long int in4__1;
+		unsigned long long int in5__1;
+		unsigned long long int in6__1;
+		unsigned long long int in7__1;
+		unsigned long long int in8__1; 
+		unsigned long long int in9__1; 
+		unsigned long long int in10__1; 
+		unsigned long long int out1__1 = 0; 
+		unsigned long long int out1_ap_vld__1 = 0; 
+		unsigned long long int out2__1 = 0;  
+		unsigned long long int out2_ap_vld__1 = 0;
+		unsigned long long int out3__1 = 0; 
+		unsigned long long int out3_ap_vld__1 = 0;
+		unsigned long long int trigger = 1;
+		scanf("%llu %llu %llu %llu %llu %llu %llu %llu %llu %llu",&in1__1,&in2__1,&in3__1,&in4__1,&in5__1,&in6__1,&in7__1,&in8__1,&in9__1,&in10__1);	
+		int dummy = 1;
+			hls_macc(&ap_clk__1,&ap_done__1,&ap_idle__1,&ap_ready__1,&ap_return__1,&ap_rst__1,&ap_start__1,&in1__1,&in2__1,&in3__1,&in4__1,&in5__1,&in6__1,&in7__1,&in8__1,&in9__1,&in10__1,&out1__1,&out1_ap_vld__1,&out2__1,&out2_ap_vld__1,&out3__1,&out3_ap_vld__1,&trigger,dummy);
+}
+return 0;
+
 }
