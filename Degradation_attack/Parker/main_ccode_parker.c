@@ -286,7 +286,7 @@ unsigned long long int in6=*in6__1;
        }
        goto ap_ST_fsm_state1;
    end:
-	printf("%lld\n",ap_return);
+	printf("%lld\n",do_twos_complement(ap_return,32));
 	*ap_clk__1=ap_clk;
 	*ap_done__1=ap_done;
 	*ap_idle__1=ap_idle;
@@ -305,20 +305,20 @@ unsigned long long int in6=*in6__1;
 
 int main(){
 	for(int i=0; i<100; i++){
-		long long int ap_clk__1 = 1;
-		long long int ap_done__1 = 0;
-		long long int ap_idle__1 = 0;
-		long long int ap_ready__1 = 1;
-		long long int ap_return__1 = 0;
+		unsigned long long int ap_clk__1 = 1;
+		unsigned long long int ap_done__1 = 0;
+		unsigned long long int ap_idle__1 = 0;
+		unsigned long long int ap_ready__1 = 1;
+		unsigned long long int ap_return__1 = 0;
 		//long long int ap_return1_ap_vld__1 = 0;
-		long long int ap_rst__1 = 0;
-		long long int ap_start__1 = 1;
-		long long int in1__1; 
-		long long int in2__1;
-		long long int in3__1;
-		long long int in4__1;
-		long long int in5__1;
-		long long int in6__1; 
+		unsigned long long int ap_rst__1 = 0;
+		unsigned long long int ap_start__1 = 1;
+		unsigned long long int in1__1; 
+		unsigned long long int in2__1;
+		unsigned long long int in3__1;
+		unsigned long long int in4__1;
+		unsigned long long int in5__1;
+		unsigned long long int in6__1; 
 		//int dummy = 1;
 
 		scanf("%llu %llu %llu %llu %llu %llu",&in1__1,&in2__1,&in3__1,&in4__1,&in5__1,&in6__1);	
