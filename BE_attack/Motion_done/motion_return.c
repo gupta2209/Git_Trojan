@@ -3,16 +3,6 @@
 
 int main(){
    int in1, in2, in3, in4, in5, in6, in7, in8, in9, in10, out1, out2, out3;
-   klee_make_symbolic(&in1,sizeof(in1),"in1");
-   klee_make_symbolic(&in2,sizeof(in2),"in2");
-   klee_make_symbolic(&in3,sizeof(in3),"in3");
-   klee_make_symbolic(&in4,sizeof(in4),"in4");
-   klee_make_symbolic(&in5,sizeof(in5),"in5");
-   klee_make_symbolic(&in6,sizeof(in6),"in6");
-   klee_make_symbolic(&in7,sizeof(in7),"in7");
-   klee_make_symbolic(&in8,sizeof(in8),"in8");
-   klee_make_symbolic(&in9,sizeof(in9),"in9");
-   klee_make_symbolic(&in10,sizeof(in10),"in10");
    int mult1 = in1 * in2;
    int mult2 = in1 * in3;
 
@@ -56,9 +46,5 @@ int main(){
 
    int shf2 = add14 >> 3;
    out3 = add11 + shf2;
-   freopen("klee_output1.txt","a+",stderr);
-   klee_print_expr("out1:=", out1);
-   klee_print_expr("out2:=", out2);
-   klee_print_expr("out3:=", out3);
    return out1+out2+out3;
 }

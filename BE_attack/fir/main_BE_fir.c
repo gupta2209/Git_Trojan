@@ -1047,7 +1047,7 @@ int main(){
 	unsigned long long int c_q0__1 = 0;
 	unsigned long long int trigger_in__1 = 1;
 	unsigned long long int x__1 = 5;
-	long long int  c_rom[11] = {1,2,3,4,5,6,7,8,9,10,11}
+	long long int  c_rom[11] = {1,2,3,4,5,6,7,8,9,10,11};
  	int dummy = 0;
  	fir(&ap_clk__1,&ap_done__1,&ap_idle__1,&ap_ready__1,&ap_return__1,&ap_rst__1,&ap_start__1,&c_address0__1,&c_ce0__1,&c_q0__1,&trigger_in__1,&x__1,c_rom,dummy);
 	return 0;

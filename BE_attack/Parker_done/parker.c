@@ -13,12 +13,7 @@
 
 int main(){
   int in1, in2, in3, in4, in5, in6;
-  klee_make_symbolic(&in1,sizeof(in1),"in1");
-  klee_make_symbolic(&in2,sizeof(in2),"in2");
-  klee_make_symbolic(&in3,sizeof(in3),"in3");
-  klee_make_symbolic(&in4,sizeof(in4),"in4");
-  klee_make_symbolic(&in5,sizeof(in5),"in5");
-  klee_make_symbolic(&in6,sizeof(in6),"in6");
+  
   int out1;
   // klee_make_symbolic(&out1,sizeof(out1),"out1");
   int t1, t2, t3, t4, t5, t6, t7;
@@ -57,8 +52,6 @@ int main(){
  else 
    out1 = 8 + in5;
 
-  freopen("klee_output1.txt","a+",stderr);
-  klee_print_expr("out1:=", out1);
  return out1;
 }
 
